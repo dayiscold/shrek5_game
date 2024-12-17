@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 6, in script
-    image bg apartment = im.Scale("backgrounds/andrey_apartment.jpeg")
-  File "game/script.rpy", line 6, in <module>
-    image bg apartment = im.Scale("backgrounds/andrey_apartment.jpeg")
-TypeError: __init__() missing 2 required positional arguments: 'width' and 'height'
+  File "game/script.rpy", line 160, in script
+    show andrey_flash at centre
+  File "game/script.rpy", line 160, in <module>
+    show andrey_flash at centre
+NameError: name 'centre' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 6, in script
-    image bg apartment = im.Scale("backgrounds/andrey_apartment.jpeg")
-  File "C:\renpy-8.3.2-sdk\renpy\ast.py", line 920, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "game/script.rpy", line 160, in script
+    show andrey_flash at centre
+  File "C:\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in show_imspec
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in <listcomp>
+    at_list = [ renpy.python.py_eval(i) for i in at_list ]
+  File "C:\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
   File "C:\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 6, in <module>
-    image bg apartment = im.Scale("backgrounds/andrey_apartment.jpeg")
-TypeError: __init__() missing 2 required positional arguments: 'width' and 'height'
+  File "game/script.rpy", line 160, in <module>
+    show andrey_flash at centre
+NameError: name 'centre' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-Shrek5 1.0
-Mon Nov 18 18:55:51 2024
+Shrek5 1.1
+Sun Dec 15 15:50:54 2024
